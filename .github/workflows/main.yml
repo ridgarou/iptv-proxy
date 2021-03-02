@@ -34,7 +34,7 @@ jobs:
       - name: Create image Flag
         run: |
           export FLAG=$(date +%s)
-          echo "::set-env name=FLAG::$FLAG"
+          echo "FLAG=$FLAG" >> $GITHUB_ENV
       
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
